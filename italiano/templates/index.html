@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+   {% include "nav/head.html" %}
+    <body>
+
+        <div class="page-holder">
+
+          {% include "nav/navbar.html" %}
+          {% include "nav/hero_section.html" %}
+          {% include "nav/detail.html" %}
+
+          <!-- About section -->
+          {% include "content/about.html" %}
+          <!-- End About section -->
+
+
+          <!-- Specialities section -->
+          {% include "content/specialities.html" %}
+          <!-- End Specialities section -->
+
+
+          <!-- Dishes Section -->
+          {% include "content/dishes.html" %}
+          <!-- End Dishes Section -->
+
+
+          <!-- Offers Section -->
+          {% include "content/offers.html" %}
+          <!-- End Offers Section -->
+
+
+          <!-- Menu Section -->
+          {% include "content/menu_section.html" %}
+          <!-- End Menu Section -->
+
+
+          <!-- Events Section -->
+          {% include "content/event_section.html" %}
+          <!-- End Events Section -->
+
+
+          <!-- Gallery Section -->
+          {% include "content/gallery.html" %}
+          <!-- End Gallery Section -->
+
+
+          <!-- Booking Section -->
+          {% include "booking/booking.html" %}
+          <!-- End Booking Section -->
+
+
+          <!-- End Booking Section -->
+          {% include "booking/contact.html" %}
+          <!-- End Booking Section -->
+
+
+            <!-- Footer -->
+          <footer id="mainFooter" class="mainFooter">
+                <div class="container">
+                    <div class="row">
+                        
+                        {% include "footer/logo_footer.html" %}
+
+                        {% include "footer/contact_footer.html" %}
+
+                        {% include "footer/newletter_footer.html" %}
+                    </div>
+
+                    <ul class="social list-unstyled list-inline">
+                        <li><a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#" target="_blank" title="Skype"><i class="fa fa-skype"></i></a></li>
+                    </ul>
+                </div>
+
+                  {% include "footer/copyrigth.html" %}
+            </footer>
+            <!-- End Footer -->
+
+            <!-- scroll top btn -->
+            <div id="scrollTop" class="btn-unique">
+                <i class="fa fa-angle-up"></i>
+            </div><!-- end scroll top btn -->
+
+
+            <!-- moadal booking form -->
+            {% include "booking/modal_booking_form.html" %}
+            <!-- end modal booking form -->
+        </div>
+
+
+        {% include "js/script.html" %}
+    </body>
+</html>

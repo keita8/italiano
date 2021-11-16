@@ -1,0 +1,34 @@
+{% load static %}
+{% load humanize %}
+
+<section id="dishes" class="dishes">
+    <div class="container text-center">
+        <header>
+            <h2>Nos plats</h2>
+            <h3>Nourriture fraiche et saine</h3>
+        </header>
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <!-- item -->
+             
+            {% for ob in  obj %}
+                
+            <div class="dish">
+                <div class="profile">
+                    <img src="{{ ob.image.url }}" class="img-responsive" alt="dish name" title="{{ ob.price }}">
+                    <div class="price">
+                        <span>{{ ob.price|intcomma }}</span>
+                    </div>
+                </div>
+                <div class="text">
+                    <h4>{{ob.title}}</h4>
+                    <p>{{ ob.description|safe|truncatechars:80  }}</p>
+                </div>
+            </div>
+
+            {% endfor %}
+            
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<section id="contact" class="contact">
+    <div id="map"></div>
+    <div class="container text-center">
+        <div class="form-holder">
+            <header>
+                <h2>Contactez nous</h2>
+                <h3>Notre équipe est à votre disposition</h3>
+            </header>
+
+            <form method="get" action="#" id="contact-form">
+                <div class="row">
+                    <label for="user-name" class="col-sm-6 unique">Nom
+                        <input type="text" name="username" id="user-name" required>
+                    </label>
+                    <label for="user-email" class="col-sm-6 unique">Email
+                        <input type="email" name="useremail" id="user-email" required>
+                    </label>
+                    <label for="message" class="col-sm-12 unique">Votre Message
+                        <textarea name="message" id="message" required></textarea>
+                    </label>
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn-unique" id="submit">Envoyez</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

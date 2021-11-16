@@ -1,0 +1,31 @@
+{% load static %}
+
+<section id="gallery" class="gallery">
+    <div class="container text-center">
+        <header>
+            <h2>Galérie</h2>
+            <h3>Consultez notre galerie</h3>
+        </header>
+
+        <div class="gellery">
+            <div class="row">
+
+                {% for galerie in mygallery %}
+                    
+                
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="{{ galerie.photo_small.url }}" alt="image">
+                        <a href="{{ galerie.photo.url }}" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

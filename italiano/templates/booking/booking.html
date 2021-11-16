@@ -1,0 +1,54 @@
+{% load static %}
+
+<section id="booking" class="booking">
+    <div class="container text-center">
+        <header>
+            <h2>Passez votre commande</h2>
+            <h3>Prenez un bon repas chez Rosiki24 </h3>
+        </header>
+
+        <div class="row">
+            <div class="form-holder col-md-10 col-md-push-1 text-center">
+                <div class="ribbon">
+                    <i class="fa fa-star"></i>
+                </div>
+
+                <h2>Faites votre reservation</h2>
+                <h3>Reservez votre table maintenant !</h3>
+
+                <form id="booking-form" method="get" action="#">
+                    <div class="row">
+                        <div class="col-md-10 col-md-push-1">
+                            <div class="row">
+                                <label for="name" class="col-sm-6 unique">Nom
+                                    <input name="name" type="text" id="name" required>
+                                </label>
+                                <label for="email" class="col-sm-6 unique">Email
+                                    <input name="email" type="email" id="email" required>
+                                </label>
+                                <label for="number" class="col-sm-6 unique">Numéro
+                                    <input name="number" type="text" id="number" required>
+                                </label>
+                                <label for="people" class="col-sm-6 unique">Nombre de personne
+                                    <input name="people" type="number" id="people" min="1" required>
+                                </label>
+                                <label for="date" class="col-sm-6 unique">Date
+                                    <input name="date" type="text" id="date" class="datepicker-here" data-language='en' required>
+                                </label>
+                                <label for="time" class="col-sm-6 unique">Heure
+                                    <input name="time" type="text" id="time" class="timepicker" required>
+                                </label>
+                                <label for="request" class="col-sm-12 unique">Votre demande
+                                    <textarea id="request" name="request" required></textarea>
+                                </label>
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn-unique">Reservez</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

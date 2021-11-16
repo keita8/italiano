@@ -1,0 +1,38 @@
+{% load static %}
+
+<section id="events" class="events">
+<div class="container">
+    <header class="text-center">
+        <h2>Evenements à venir</h2>
+        <h3>Ne manquez plus aucun évènement</h3>
+    </header>
+
+    <div class="row">
+        <!-- Profile Side  -->
+        {% for e in event  %}
+            
+
+        <div class="col-sm-6">
+            <div class="profile has-border" style="background-image: url({{ e.photo.url }});">
+                <ul class="date list-unstyled list-inline clearfix">
+                    <li class="day pull-left">{{ e.date|date:'d' }}<sup></sup></li>
+                    <li class="month pull-left">{{ e.date|date:'F' }}<span>{{ e.date|date:'Y' }}</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Details Side  -->
+        <div class="col-sm-6">
+            <div class="details">
+                <h3>{{ e.title|safe }}</h3>
+                <h4 class="text-primary">{{ e.date|date:'D d/m/Y' }} | {{ e.date|date:'H:i' }}</h4>
+                <p class="lead">{{ e.description|safe }}</p>
+                <a href="#" class="read-more btn-unique">En savoir plus</a>
+            </div>
+        </div>
+
+       {% endfor %}
+
+    </div>
+</div>
+</section>

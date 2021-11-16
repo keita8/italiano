@@ -1,0 +1,33 @@
+{% load static %}
+
+<section id="dishes" class="dishes">
+    <div class="container text-center">
+        <header>
+            <h2>Nos plats</h2>
+            <h3>Nourriture fraiche et saine</h3>
+        </header>
+        <!-- Set up your HTML -->
+        <div class="owl-carousel owl-theme">
+            <!-- item -->
+            {% for dishe in dishe %}
+                
+           
+            <div class="dish">
+                <div class="profile">
+                    <img src="{% static 'img/dish-c.png' %}" class="img-responsive" alt="dish name" title="25 000 gnf">
+                    <div class="price">
+                        <span>25k</span>
+                    </div>
+                </div>
+                <div class="text">
+                    <h4>Crevettes frites</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                </div>
+            </div>
+
+             {% endfor %}
+
+
+        </div>
+    </div>
+</section>

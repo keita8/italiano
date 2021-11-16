@@ -1,0 +1,19 @@
+{% load static %}
+
+<!-- About Section -->
+<section id="about" class="about">
+
+    {% for restau in restau %}
+
+    <div class="container text-center">
+        <header>
+            <h2>{{ restau.title|safe }}</h2>
+            <h3>{{ restau.subtitle|safe }}</h3>
+        </header>
+        <p class="lead">{{ restau.content|safe|truncatechars:250 }}</p>
+    </div>
+
+    {% endfor %}
+</section>
+<!-- End About Section -->
+
